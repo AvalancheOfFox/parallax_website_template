@@ -1,0 +1,126 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+  font-family: "Futura", sans-serif;
+  line-height: 1.8em;
+  font-weight: 400;
+  color: #666;
+}
+
+.pimg1, .pimg2, .pimg3 {
+  position: relative;
+  opacity: 0.75;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /*
+  scroll = no Parallax
+  fixed = Parallax
+  */
+}
+
+.pimg1 {
+  background-image: url("../imgs/Poland_Finals_-9.jpg");
+  min-height: 100%;
+  resize: both;
+}
+
+.pimg2 {
+  background-image: url("../imgs/Poland_Finals_-10.jpg");
+  min-height: 400px;
+  resize: both;
+}
+.pimg3 {
+  background-image: url("../imgs/Poland_Finals_-13.jpg");
+  min-height: 400px;
+  resize: both;
+}
+
+.section {
+  text-align: center;
+  padding: 50px 80px;
+}
+
+.section-light {
+  background-color: #f4f4f4;
+  color: #666
+}
+
+.section-dark {
+  background-color: #282e34;
+  color: #ddd;
+}
+
+.ptext {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+  color: #000;
+  font-size: 27px;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+}
+
+.ptext .border {
+  background-color: #111;
+  color: white;
+  padding: 20px;
+}
+
+.ptext .border .trans {
+  background-color: transparent;
+}
+
+.btn {
+  border: 1px solid #59FFA0;
+  background: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-family: "Futura";
+  cursor: crosshair;
+  margin: 10px;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  z-index: -1;
+  transition: 0.8s;
+}
+
+.btn1, .border {
+  color: #59FFA0;
+}
+
+.btn1::before {
+  top: 0;
+  border-radius: 50% 50% 0 0;
+
+}
+
+.btn1:hover, .border:hover {
+  color: #B4ADEA;
+}
+
+.container:hover {
+  box-shadow: 5px;
+  opacity: 85%;
+  transition: 0.2s;
+  
+}
+
+
+@media (max-width: 568px) {
+  .pimg1, .pimg2, .pimg3 {
+    background-attachment: scroll;
+  }
+}
